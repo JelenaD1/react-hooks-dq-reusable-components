@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Inventory from "./Inventory";
 import Shop from "./Shop";
+import PotionTile from "./PotionTile"
 import potions from "../data";
 
 function App() {
@@ -86,7 +87,7 @@ function App() {
   return (
     <div className="app">
       <div className="potion-shop">
-        <Shop potions={potions} addToInventory={addToInventory} />
+        <Shop potions={potions} addToInventory={addToInventory} sell={sell} />
         <Inventory
           stopShake={stopShake}
           shake={shake}
@@ -95,6 +96,7 @@ function App() {
           potions={potions}
           inventory={inventory}
         />
+        
       </div>
     </div>
   );
